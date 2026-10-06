@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-06T00:53:44.016Z",
+  "updatedAt": "2026-10-06T01:01:13.117Z",
   "accounts": [
     {
       "id": "claude-1",
@@ -33,19 +33,11 @@
       "id": "codex",
       "provider": "codex",
       "label": "Codex",
-      "checkedAt": "2026-10-06T00:53:44.015Z",
-      "status": "ready",
+      "checkedAt": null,
+      "status": "unavailable",
       "ordinaryUsageAllowed": null,
-      "primary": {
-        "usedPercent": 25,
-        "windowDurationMins": 300,
-        "resetsAt": 1791257172
-      },
-      "secondary": {
-        "usedPercent": 61,
-        "windowDurationMins": 10080,
-        "resetsAt": 1791585560
-      }
+      "primary": null,
+      "secondary": null
     }
   ]
 }
