@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-06T05:18:39.850Z",
+  "updatedAt": "2026-10-06T05:33:40.375Z",
   "accounts": [
     {
       "id": "claude-1",
@@ -33,7 +33,7 @@
       "id": "codex",
       "provider": "codex",
       "label": "Codex",
-      "checkedAt": "2026-10-06T05:18:39.850Z",
+      "checkedAt": "2026-10-06T05:33:40.375Z",
       "status": "ready",
       "ordinaryUsageAllowed": null,
       "primary": {
