@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f2ec">
+  <meta name="description" content="Claude and Codex usage left, with reset countdowns.">
+  <title>Token Eater</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <link rel="stylesheet" href="./app.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <main class="w">
+    <header><h1>Token Eater</h1><p>Claude &amp; Codex · usage left</p></header>
+    <p class="preview" id="preview-note" hidden>Claude sample values · Codex live reading</p>
+    <div id="accounts" aria-label="Account usage"><p class="loading">Checking usage…</p></div>
+    <footer>
+      <p id="freshness" role="status">Waiting for the first reading</p>
+      <div class="actions">
+        <button id="refresh" type="button">Refresh</button>
+        <button id="install" type="button" hidden>Install app</button>
+      </div>
+      <p id="hint"></p>
+    </footer>
+  </main>
+</body>
+</html>

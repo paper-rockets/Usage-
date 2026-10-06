@@ -1,0 +1,16 @@
+profiles/
+site/
+qa/
+*.log
+*.tmp
+HANDOFF.md
+AGENTS.md
+GEMINI.md
+Log in account *.cmd
+local-settings.json
+publish-input.json
+test-*.mjs
+node_modules/
+.cache/
+dist/
+desktop-data/

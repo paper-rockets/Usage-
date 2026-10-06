@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-06T00:53:44.016Z",
+  "accounts": [
+    {
+      "id": "claude-1",
+      "provider": "claude",
+      "label": "Main",
+      "checkedAt": null,
+      "status": "pending",
+      "primary": null,
+      "secondary": null
+    },
+    {
+      "id": "claude-2",
+      "provider": "claude",
+      "label": "School",
+      "checkedAt": null,
+      "status": "pending",
+      "primary": null,
+      "secondary": null
+    },
+    {
+      "id": "claude-3",
+      "provider": "claude",
+      "label": "Spare",
+      "checkedAt": null,
+      "status": "pending",
+      "primary": null,
+      "secondary": null
+    },
+    {
+      "id": "codex",
+      "provider": "codex",
+      "label": "Codex",
+      "checkedAt": "2026-10-06T00:53:44.015Z",
+      "status": "ready",
+      "ordinaryUsageAllowed": null,
+      "primary": {
+        "usedPercent": 25,
+        "windowDurationMins": 300,
+        "resetsAt": 1791257172
+      },
+      "secondary": {
+        "usedPercent": 61,
+        "windowDurationMins": 10080,
+        "resetsAt": 1791585560
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "token-eater",
+  "productName": "Token Eater",
+  "version": "1.0.0",
+  "description": "Claude and Codex usage in a standalone desktop app",
+  "author": "paper-rockets",
+  "private": true,
+  "type": "module",
+  "main": "desktop/main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "build:windows": "electron-builder --win nsis --x64 --publish never",
+    "build:web": "node build-site.mjs",
+    "test": "node --test test-reader.mjs test-server.mjs test-sync.mjs"
+  },
+  "build": {
+    "appId": "com.paperrockets.tokeneater",
+    "productName": "Token Eater",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "desktop/main.mjs",
+      "server.mjs",
+      "read-codex.mjs",
+      "sync.mjs",
+      "publish-settings.json",
+      "package.json",
+      "index.html",
+      "app.css",
+      "app.js",
+      "manifest.webmanifest",
+      "sw.js",
+      "icon.svg",
+      "icon-192.png",
+      "icon-512.png",
+      "icon.ico"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico",
+      "artifactName": "Token-Eater-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Token Eater"
+    }
+  },
+  "devDependencies": {
+    "electron": "44.5.1",
+    "electron-builder": "26.15.3"
+  }
+}
