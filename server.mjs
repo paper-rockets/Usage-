@@ -8,10 +8,10 @@ import { syncUsageFile } from './sync.mjs';
 const root = fileURLToPath(new URL('.', import.meta.url));
 const files = new Set(['index.html', 'app.css', 'app.js', 'manifest.webmanifest', 'sw.js', 'icon.svg', 'icon-192.png', 'icon-512.png', 'usage.json']);
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.webmanifest': 'application/manifest+json', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png' };
-export async function startServer({ port = 8221, host = '0.0.0.0', dataPath = path.join(root, 'usage.json') } = {}) {
+export async function startServer({ port = 8221, host = '0.0.0.0', dataPath = path.join(root, 'usage.json'), phoneSync = true } = {}) {
 let refreshing;
 const refresh = () => refreshing ??= refreshCodex(dataPath).then(result => {
-  syncUsageFile(dataPath).then(status => console.log(`[Token Eater] Phone sync: ${status}`))
+  if (phoneSync) syncUsageFile(dataPath).then(status => console.log(`[Token Eater] Phone sync: ${status}`))
     .catch(() => console.log('[Token Eater] Phone sync unavailable; the local reading is saved.'));
   return result;
 }).finally(() => { refreshing = null; });

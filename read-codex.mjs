@@ -31,8 +31,10 @@ export async function fetchCodexUsage() {
   // Use the installed, signed-in CLI. No credentials are copied into this project.
   const cli = process.env.TOKEN_EATER_CODEX_CLI || (process.platform === 'win32'
     ? path.join(process.env.APPDATA, 'npm/node_modules/@openai/codex/bin/codex.js') : null);
+  // app.asar is a virtual archive and cannot be a child process working directory.
+  const runtimeCwd = process.versions.electron ? path.dirname(process.execPath) : root;
   const child = cli
-    ? spawn(process.execPath, [cli, 'app-server', '--stdio'], { cwd: root, windowsHide: true,
+    ? spawn(process.execPath, [cli, 'app-server', '--stdio'], { cwd: runtimeCwd, windowsHide: true,
       env: { ...process.env, ...(process.versions.electron ? { ELECTRON_RUN_AS_NODE: '1' } : {}) },
       stdio: ['pipe', 'pipe', 'ignore'] })
     : spawn('codex', ['app-server', '--stdio'], { cwd: root, stdio: ['pipe', 'pipe', 'ignore'] });

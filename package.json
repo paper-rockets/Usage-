@@ -1,7 +1,7 @@
 {
   "name": "token-eater",
   "productName": "Token Eater",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Claude and Codex usage in a standalone desktop app",
   "author": "paper-rockets",
   "private": true,
